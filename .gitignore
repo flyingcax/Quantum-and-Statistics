@@ -1,5 +1,3 @@
 # 忽略特定文件夹
 .history/
 
-# 忽略main.html
-main.html
