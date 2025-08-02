@@ -60,49 +60,92 @@ $$
 \end{align*}
 $$
 
-### 产生-湮灭算符
-- 谐振子体系的哈密顿量： 
-  - $$H = \frac{1}{2m}\hat{p}^2 + \frac{1}{2}m \omega^2 \hat{x}^2$$
-- 为了简化方程，在保证 $\hat{x}\hat{p}$ 相乘不变的条件下，将 $\hat{x}$ 与 $\hat{p}$ 无量纲化。
-  - $$m\omega\hat{x}^2\Rightarrow \hat{x}^2\, , \,\hat{p}^2\Rightarrow m\omega \hat{p}^2$$
-- 化简后哈密顿量： 
-  - $$H = \omega(\hat{p}^2 +\hat{x}^2)/2$$
-- 产生-湮灭算符： 
-  - $$\hat{a}=(\hat{x}+i\hat{p})/\sqrt{2}\,,\,\hat{a}^{\dagger}=(\hat{x}-i\hat{p})/\sqrt{2}$$
-- 哈密顿量： 
-  - $$H = \omega (\hat{a}^\dagger\hat{a} + \frac{1}{2})=\omega (\hat{N}+\frac{1}{2})$$
-- 对易关系： 
-  - $$[\hat{a},\hat{a}^\dagger]=\hat{I}$$
-- 粒子数算符： 
-  - $$\hat{N} = \hat{a}^\dagger\hat{a}\,,\,\hat{N}|n\rangle = n|n\rangle$$  
-  - $\hat{N}$ 是厄米算符
-- 能级： 
-  - $$H|n\rangle = \omega (n+\frac{1}{2})|n\rangle = E_n|n\rangle$$
-- 递归方程： 
-  - $$\hat{a}|n\rangle = \sqrt{n}|n-1\rangle \,,\,\hat{a}^{\dagger}|n\rangle = \sqrt{n+1}|n+1\rangle$$
+**角动量：** $\mathcal{H}$ 空间中的转动生成元 
 
 ### 含时演化
-- 绘景
-  - 薛定谔绘景（T）：算符不变，态随时间演化
-    $$|\psi_T(t)\rangle = \hat{\mathcal{U}}_T(t,t_0)\,|\psi(t_0)\rangle$$
-  - 海森堡绘景（H）：算符随时间演化，态不变
-    $$\hat{A}_H(t) = \hat{\mathcal{U}}_T^{\dagger}\,\hat{A}\,\hat{\mathcal{U}}_T$$
-  - 相互作用绘景（I）：算符随原体系演化，态随微扰演化
+**绘景：** 描述量子世界的方式，不影响力学量的值的计算
+- 薛定谔绘景（T）：算符不变，态随时间演化
+  $$|\psi_T(t)\rangle = \hat{\mathcal{U}}_T(t,t_0)\,|\psi(t_0)\rangle$$
+- 海森堡绘景（H）：算符随时间演化，态不变
+  $$\hat{A}_H(t) = \hat{\mathcal{U}}_T^{\dagger}\,\hat{A}\,\hat{\mathcal{U}}_T$$
+- 相互作用绘景（I）：算符随原体系演化，态随微扰演化
+  $$
+    \begin{align*}
+        \hat{A}_I(t) &= \hat{\mathcal{U}}^{\dagger}(t,t_0)\hat{A}\,\hat{\mathcal{U}}(t,t_0) \\
+        |\psi_I(t)\rangle &= \hat{\mathcal{U}}_I(t,t_0)\,|\psi(t_0)\rangle
+    \end{align*}
     $$
-      \begin{align*}
-          \hat{A}_I(t) &= \hat{\mathcal{U}}^{\dagger}(t,t_0)\hat{A}\,\hat{\mathcal{U}}(t,t_0) \\
-          |\psi_I(t)\rangle &= \hat{\mathcal{U}}_I(t,t_0)\,|\psi(t_0)\rangle
-      \end{align*}
-      $$
-    > **注：**
-    > - 当 $H$ 不显含时间 $t$ ，则 $\hat{\mathcal{U}} = \exp(-iHt)$
-    > - 在相互作用绘景中，时间演化算符被分解为 $\hat{\mathcal{U}}_T(t,t_0) = {\mathcal{U}}(t,t_0)\,{\mathcal{U}}_I(t,t_0)$
+> **注：**
+> - 当 $H$ 不显含时间 $t$ ，则 $\hat{\mathcal{U}} = \exp(-iHt)$
+> - 在相互作用绘景中，体系哈密顿量分解为无扰动项与扰动项 $\hat{H}_T = \hat{H} + \hat{V}$ ，时间演化算符被分解为 $\hat{\mathcal{U}}_T(t,t_0) = {\mathcal{U}}(t,t_0)\,{\mathcal{U}}_I(t,t_0)$
+
+**时间演化方程：**
+- 薛定谔方程：
+$$
+i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle 
+$$
+通常，人们会在坐标表象下，计算波函数 $\psi(\bm{r} , t)$ 随时间的演化。将 $\hat{H}$ 的等效算符记为 $\mathcal{H} $ ，则有
+$$
+i\hbar \frac{\partial}{\partial t} \psi(\bm{r} , t) = \mathcal{H} \,\psi(\bm{r} , t)
+$$
+当体系处于定态时，哈密顿量 $\hat{H}$ 的本征值记为 $E$ ，对应的**定态薛定谔方程**：
+$$
+\mathcal{H} \,\psi(\bm{r} , t) = E \, \psi(\bm{r} , t)
+$$
+> **注：** 
+> - 定态即微观状态的分布确定，若处于某个态，则力学量的测量值不会发生变化。
+> - 真实体系是处于多个定态叠加形成的叠加态中。
+> - 定态与不含时是两个概念。定态是对于体系而言的，不含时是对于力学量而言的。
+- 海森堡方程：对于力学量算符 $\hat{O}$ ，有
+$$
+\frac{\mathrm{d}}{\mathrm{d} t}\hat{O} = -\frac{i}{\hbar} [\hat{O},\hat{H}]
+$$
+为方便表示，取 $\hbar = 1$ ，则有
+$$
+\dot{\hat{O}} = -i[\hat{O},\hat{H}] 
+$$
+- 相互作用绘景中的演化方程：
+$$
+\begin{align*}
+  i \frac{\partial}{\partial t} |\psi_I(t)\rangle &= \hat{V}_I(t) |\psi_I(t)\rangle\\
+  \frac{\mathrm{d}}{\mathrm{d} t}{\hat{O}} &= -i[\hat{O},\hat{H}]
+\end{align*}
+$$
+
+### 粒子与相互作用
+**自由粒子**
+- 自由粒子的哈密顿量：
+  $$\hat{H} = \frac{\hat{p}^2}{2m}$$
+
+**谐振子**
+- 谐振子体系的哈密顿量： 
+  $$H = \frac{1}{2m}\hat{p}^2 + \frac{1}{2}m \omega^2 \hat{x}^2$$
+- 为了简化方程，在保证 $\hat{x}\hat{p}$ 相乘不变的条件下，将 $\hat{x}$ 与 $\hat{p}$ 无量纲化。
+  $$m\omega\hat{x}^2\Rightarrow \hat{x}^2\, , \,\hat{p}^2\Rightarrow m\omega \hat{p}^2$$
+- 化简后哈密顿量： 
+  $$H = \omega(\hat{p}^2 +\hat{x}^2)/2$$
+- 产生-湮灭算符： 
+  $$\hat{a}=(\hat{x}+i\hat{p})/\sqrt{2}\,,\,\hat{a}^{\dagger}=(\hat{x}-i\hat{p})/\sqrt{2}$$
+- 哈密顿量： 
+  $$H = \omega (\hat{a}^\dagger\hat{a} + \frac{1}{2})=\omega (\hat{N}+\frac{1}{2})$$
+- 对易关系： 
+  $$[\hat{a},\hat{a}^\dagger]=\hat{I}$$
+- 粒子数算符：产生-堙灭算符组合得到的厄米算符 
+  $$\hat{N} = \hat{a}^\dagger\hat{a}\,,\,\hat{N}|n\rangle = n|n\rangle$$  
+- 能级： 
+  $$H|n\rangle = \omega (n+\frac{1}{2})|n\rangle = E_n|n\rangle$$
+- 递归方程： 
+  $$\hat{a}|n\rangle = \sqrt{n}|n-1\rangle \,,\,\hat{a}^{\dagger}|n\rangle = \sqrt{n+1}|n+1\rangle$$
+
+**自旋**
 
 ### 泡利矩阵
 
 ### 密度算符
 
+## 统计力学
 
+## 量子统计
 
 
 ## 数学补充
