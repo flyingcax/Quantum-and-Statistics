@@ -61,6 +61,17 @@ $$
 $$
 
 **角动量：** $\mathcal{H}$ 空间中的转动生成元 
+- 用 $\hat{\bm{J}}= \sum \hat{J}_i \bm{e}_i$ 表示，可知 $\hat{J}^2 = \sum \hat{J}_i\hat{J}_i$ 。
+- 易知 $\hat{J}^2$ 与 $\hat{J}_x$ 、 $\hat{J}_y$ 、 $\hat{J}_z$ 均对易，即对易子等于 $0$ 。
+- 本征方程：
+  $$
+  \begin{align*}
+    &\hat{J}^2 |j,m\rangle = j(j+1)\hbar ^2|j,m\rangle\\
+    & \hat{J}_z |j,m\rangle = m\hbar |j,m\rangle\\
+    &-j\leqslant  m\leqslant  j\,\text{and}\, j= 0,\frac{1}{2},1,\cdots  
+  \end{align*}
+  $$
+- $\hat{J}_{\pm }$ 是 $\hat{J}_3$ 的升降算符，是计算角动量本征值的手段。
 
 ### 含时演化
 **绘景：** 描述量子世界的方式，不影响力学量的值的计算
