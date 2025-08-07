@@ -1,4 +1,9 @@
-# 量子统计
+# 量子统计 {ignore=true}
+## 目录 {ignore=true}
+[toc]
+
+---
+
 ## 量子力学
 ### $\mathcal{H}$ 空间与 Dirac 符号
 **$\mathcal{H}$ 空间：** 是一种复线性空间，用于表示纯态。
@@ -24,6 +29,8 @@
 - 厄米算符： $\hat{O}^{\dagger} = \hat{O}$
   $$(\hat{O}_1 \hat{O}_2)^{\dagger} = \hat{O}_2^{\dagger}\hat{O}_1^{\dagger}$$
   在量子力学中，力学量（可观测量）用厄米算符表示，具体的值即对应的本征值。
+- 力学量的期望：当系统处于态 $|\psi\rangle$ 时，力学量 $\hat{O}$ 的期望 $\langle O \rangle$ 为
+  $$\langle O \rangle = \langle \psi |O|\psi\rangle$$
 
 **本征方程、本征值、本征矢：** 连接理论与现实的桥梁。
 - 本征方程： $\hat{A}|e\rangle = a|e\rangle$
@@ -83,6 +90,10 @@ $$
   $$
 - $\hat{J}_{\pm }$ 是 $\hat{J}_3$ 的升降算符，是计算角动量本征值的手段。
 
+<p align="right"><a href="#目录">返回目录</a></p>
+
+
+
 ### 含时演化
 **绘景：** 描述量子世界的方式，不影响力学量的值的计算
 - 薛定谔绘景（T）：算符不变，态随时间演化
@@ -132,6 +143,8 @@ $$
   \frac{\mathrm{d}}{\mathrm{d} t}{\hat{O}} &= -i[\hat{O},\hat{H}]
 \end{align*}
 $$
+
+<p align="right"><a href="#目录">返回目录</a></p>
 
 ### 粒子与相互作用
 **自由粒子**
@@ -226,15 +239,48 @@ $$
   （若 $n_i$ 取 $2$ 及以上的值，则存在处于完全相同的态的两个粒子，此时必定不是费米子）
   多体系统的态分布，见统计力学部分[无相互作用粒子](#无相互作用粒子)
 
-### 密度算符
+<p align="right"><a href="#目录">返回目录</a></p>
+
+### $\mathcal{L}$ 空间
+**密度算符：** 包含了系统所有信息的算符，等效替代态矢量
+- 由态矢量的外积构成密度算符
+  $$\hat{\rho}(t) = |\psi(t)\rangle\langle\psi(t)|$$
+  满足厄米性与归一性
+  $$\hat{\rho}^{\dagger} = \hat{\rho}\quad,\quad \mathrm{tr}(\hat{\rho}) =1$$
+- 力学量的期望
+  $$\langle O \rangle = \mathrm{tr}(\hat{O}\hat{\rho})$$
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
+---
 
 ## 统计力学
 ### 系综
 
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
 ### 无相互作用粒子
 
-## 量子统计
 
+<p align="right"><a href="#目录">返回目录</a></p>
+
+---
+
+## 量子统计
+### 统计力学的量子表述
+
+
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
+### 线性响应理论
+
+
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
+---
 
 ## 数学补充
 ### 对易
@@ -242,3 +288,5 @@ $$
 - $[\hat{O}_1\hat{O}_2,\hat{O}_3] = \hat{O}_1[\hat{O}_2,\hat{O}_3] + [\hat{O}_1,\hat{O}_3]\hat{O}_2$
 - $\{\hat{O}_1,\hat{O}_2\} = \hat{O}_1\hat{O}_2 + \hat{O}_2\hat{O}_1$
 ### 留数定理
+
+<p align="right"><a href="#目录">返回目录</a></p>
