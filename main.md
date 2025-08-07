@@ -22,11 +22,13 @@
 - 厄米共轭： $\forall\, |\psi _1\rangle,|\psi _2\rangle$ ，若 $\hat{O}^{\dagger}$ 满足 $\langle \psi _2|\hat{O}^{\dagger}|\psi _1\rangle = \langle \psi _1|\hat{O}|\psi _2\rangle^*$ ，则 $\hat{O}^{\dagger}$ 是 $\hat{O}$ 的厄米共轭
 > **注：** 线性算符的厄米共轭是如上定义的，如果是反线性算符（如时间反演算符），则应该为 $\langle \psi _2|\hat{T}^{\dagger}|\psi _1\rangle = \langle \psi _1|\hat{T}|\psi _2\rangle$
 - 厄米算符： $\hat{O}^{\dagger} = \hat{O}$
-- $$(\hat{O}_1 \hat{O}_2)^{\dagger} = \hat{O}_2^{\dagger}\hat{O}_1^{\dagger}$$
+  $$(\hat{O}_1 \hat{O}_2)^{\dagger} = \hat{O}_2^{\dagger}\hat{O}_1^{\dagger}$$
+  在量子力学中，力学量（可观测量）用厄米算符表示，具体的值即对应的本征值。
 
 **本征方程、本征值、本征矢：** 连接理论与现实的桥梁。
 - 本征方程： $\hat{A}|e\rangle = a|e\rangle$
-- 本征值： $a\in \mathbb{C}$ ；对于厄米算符，其本征值均为实数 $a\in \mathbb{R}$
+- 本征值： $a\in \mathbb{C}$ 
+  对于厄米算符，其本征值均为实数 $a\in \mathbb{R}$
 - 本征矢： $|e\rangle$
 
 **$A$ 表象：** 用 $A$ 的全部本征矢（正交归一后）作为基矢，可以表示全部的态矢量与算符。
@@ -60,15 +62,23 @@ $$
 \end{align*}
 $$
 
+<a id="angular-momentum"></a>
 **角动量：** $\mathcal{H}$ 空间中的转动生成元 
 - 用 $\hat{\bm{J}}= \sum \hat{J}_i \bm{e}_i$ 表示，可知 $\hat{J}^2 = \sum \hat{J}_i\hat{J}_i$ 。
-- 易知 $\hat{J}^2$ 与 $\hat{J}_x$ 、 $\hat{J}_y$ 、 $\hat{J}_z$ 均对易，即对易子等于 $0$ 。
+- 对易关系：
+  $$
+  \begin{align*}
+    &[\hat{J}_i,\hat{J}_j] = i \hbar \epsilon_{ijk} \hat{J}_k \\
+    &[\hat{J}_i,\hat{J}^2] = 0
+  \end{align*}
+  $$
 - 本征方程：
   $$
   \begin{align*}
     &\hat{J}^2 |j,m\rangle = j(j+1)\hbar ^2|j,m\rangle\\
     & \hat{J}_z |j,m\rangle = m\hbar |j,m\rangle\\
-    &-j\leqslant  m\leqslant  j\,\text{and}\, j= 0,\frac{1}{2},1,\cdots  
+    & j= 0,\frac{1}{2},1,\cdots  \\
+    & m=-j,-j+1\cdots,j
   \end{align*}
   $$
 - $\hat{J}_{\pm }$ 是 $\hat{J}_3$ 的升降算符，是计算角动量本征值的手段。
@@ -148,13 +158,80 @@ $$
 - 递归方程： 
   $$\hat{a}|n\rangle = \sqrt{n}|n-1\rangle \,,\,\hat{a}^{\dagger}|n\rangle = \sqrt{n+1}|n+1\rangle$$
 
-**自旋**
+**电子自旋 $\bm{S}$**
+- 本征方程：
+  $$
+  \begin{align*}
+    &\hat{S}^2 |s,m_s\rangle = s(s+1)\hbar ^2|s,m_s\rangle\\
+    & \hat{S}_i |s,m_s\rangle = m_s\hbar |s,m_s\rangle\\
+    & s= \frac{1}{2}  \\
+    & m= -\frac{1}{2},\frac{1}{2}
+  \end{align*}
+  $$ 
+- 泡利算符：满足[角动量算符对易关系](#angular-momentum)且本征值为 $\pm 1$ 的算符
+  $$
+  [\hat{\sigma}_i,\hat{\sigma}_j] = 2i\epsilon_{ijk}\hat{\sigma}_k \qquad \{\hat{\sigma}_i,\hat{\sigma}_j\} = 2\delta_{ij}
+  $$
+  用矩阵描述自旋：令 $\hat{\bm{S}} = \hbar \hat{\bm{\sigma}}/2$
+- 泡利矩阵：用矩阵形象地表示出泡利算符
+  $$
+  \sigma_1 = \begin{pmatrix}
+    0 &1\\
+    1 &0 
+  \end{pmatrix}\quad \sigma_2 = \begin{pmatrix}
+    0 &-i\\
+    i &0 
+  \end{pmatrix}\quad \sigma_3 = \begin{pmatrix}
+    1 &0\\
+    0 &-1 
+  \end{pmatrix}
+  $$
+  由上可知， $\sigma_i^2 = I$ ，可得 $\sigma_i$ 的本征值为 $\pm 1$
+  $$
+  \begin{align*}
+    &\sigma _1 \binom{1}{1} =  \binom{1}{1} \qquad \sigma _1 \binom{1}{-1} = - \binom{1}{-1} \\
+    &\sigma _2 \binom{1}{i} =  \binom{1}{i} \qquad \sigma _2 \binom{1}{-i} = - \binom{1}{-i} \\
+    &\sigma _3 \binom{1}{0} =  \binom{1}{0} \qquad \sigma _3 \binom{0}{1} = - \binom{0}{1} \\
+  \end{align*}
+  $$
+- 磁场中的自旋：
+  定义波尔磁矩：
+  $$\mu_B = \frac{e\hbar}{2m_e}$$
+  电子自旋对应的磁矩为：
+  $$\bm{\mu} = -2\mu _B\frac{\bm{S}}{\hbar}$$
+  磁势：
+  $$U = -\bm{\mu}\cdot\bm{B} $$
 
-### 泡利矩阵
+**全同粒子**
+- 定义：当交换体系中任意两个粒子，任何观测量的值保持不变，则该体系由全同粒子组成
+- 全同粒子分为 Boson 和 Fermion
+  - Boson：波函数交换对称 
+  $$\psi(\cdots q_n \cdots q_m \cdots) = \psi(\cdots q_m \cdots q_n \cdots)$$
+  - Fermion：波函数交换反对称 
+  $$\psi(\cdots q_n \cdots q_m \cdots) = - \psi(\cdots q_m \cdots q_n \cdots)$$
+- 二粒子系统：
+  - Boson：
+    两粒子处于相同的能态时
+    $$\psi = \psi_k(q_1)\otimes \psi_k(q_2)$$
+    两粒子处于两个不同的能态 $\psi_1$ 和 $\psi_2$ 时
+    $$\psi = \frac{1}{\sqrt{2}}[\psi_1(q_1)\otimes\psi_2(q_2)+\psi_2(q_1)\otimes\psi_1(q_2)]$$
+  - Fermion：
+    两粒子处于相同的能态时
+    $$\psi = 0$$
+    两粒子处于两个不同的能态 $\psi_1$ 和 $\psi_2$ 时
+    $$\psi = \frac{1}{\sqrt{2}}[\psi_1(q_1)\otimes\psi_2(q_2)-\psi_2(q_1)\otimes\psi_1(q_2)]$$  
+- 多体系统：假设能态 $\psi_i$ 上有 $n_i$ 个粒子。
+  对于 Boson，$n_i = 0,1,2\cdots$
+  对于 Fermion，$n_i$ 只能取 $0,1$
+  （若 $n_i$ 取 $2$ 及以上的值，则存在处于完全相同的态的两个粒子，此时必定不是费米子）
+  多体系统的态分布，见统计力学部分[无相互作用粒子](#无相互作用粒子)
 
 ### 密度算符
 
 ## 统计力学
+### 系综
+
+### 无相互作用粒子
 
 ## 量子统计
 
