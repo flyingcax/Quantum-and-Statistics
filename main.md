@@ -38,6 +38,16 @@
   对于厄米算符，其本征值均为实数 $a\in \mathbb{R}$
 - 本征矢： $|e\rangle$
 
+**密度算符：** 包含了系统所有信息的算符，等效替代态矢量
+- 由态矢量的外积构成密度算符
+  $$\hat{\rho}(t) = |\psi(t)\rangle\langle\psi(t)|$$
+  满足厄米性与归一性
+  $$\hat{\rho}^{\dagger} = \hat{\rho}\quad,\quad \mathrm{tr}(\hat{\rho}) =1$$
+  具有一种运算不变性
+  $$\hat{\rho}^2 = \hat{\rho}$$
+- 力学量的期望
+  $$\langle O \rangle = \mathrm{tr}(\hat{O}\hat{\rho})$$
+
 **$A$ 表象：** 用 $A$ 的全部本征矢（正交归一后）作为基矢，可以表示全部的态矢量与算符。
 - $\hat{A}|e_k\rangle = a_k|e_k\rangle$
 - 态矢量： $\forall \, |\psi\rangle \in \mathcal{H} \, ,\, \exists\, \{c_k\} \in \mathbb{C} \, , \, s.t.\,|\psi\rangle = \sum_k c_k|e_k\rangle$ 。其中 $c_k = \langle e_k | \psi \rangle$
@@ -123,6 +133,14 @@ $$
 当体系处于定态时，哈密顿量 $\hat{H}$ 的本征值记为 $E$ ，对应的**定态薛定谔方程**：
 $$
 \mathcal{H} \,\psi(\bm{r} , t) = E \, \psi(\bm{r} , t)
+$$
+利用密度算符，薛定谔方程还有如下的形式
+$$
+\frac{\mathrm{d}}{\mathrm{d} t}\hat{\rho} = -\frac{i}{\hbar} [\hat{H},\hat{\rho}]
+$$
+为方便表示，取 $\hbar = 1$ ，则有
+$$
+\dot{\hat{\rho}} = -i[\hat{H},\hat{\rho}] 
 $$
 > **注：** 
 > - 定态即微观状态的分布确定，若处于某个态，则力学量的测量值不会发生变化。
@@ -242,13 +260,29 @@ $$
 <p align="right"><a href="#目录">返回目录</a></p>
 
 ### $\mathcal{L}$ 空间
-**密度算符：** 包含了系统所有信息的算符，等效替代态矢量
-- 由态矢量的外积构成密度算符
-  $$\hat{\rho}(t) = |\psi(t)\rangle\langle\psi(t)|$$
-  满足厄米性与归一性
-  $$\hat{\rho}^{\dagger} = \hat{\rho}\quad,\quad \mathrm{tr}(\hat{\rho}) =1$$
-- 力学量的期望
-  $$\langle O \rangle = \mathrm{tr}(\hat{O}\hat{\rho})$$
+**混态**
+- 纯态：用单一的态 $|\psi\rangle$ 描述的状态，即 $\mathcal{H}$ 空间中描述的态
+  混态：以 $p_i$ 的概率处于态 $|\psi_i\rangle$ 的状态，即多个纯态的叠加态
+- 密度算符：
+  $$\hat{\rho} = \sum p_i|\psi_i\rangle\langle\psi_i|$$
+  与纯态中的密度算符相同，具有厄米性与归一性
+  $$\hat{\rho}^{\dagger} = \hat{\rho}\quad,\quad \mathrm{tr}\hat{\rho} =1$$
+  且满足以下不等式
+  $$\mathrm{tr}\hat{\rho}^2 \leqslant \mathrm{tr}\hat{\rho}$$
+  在选择某一表象 $\{|n\rangle\}$ （正交完备归一）之后，密度算符可以展开为
+  $$\hat{\rho} = \sum_{mn} \rho_{mn} |m\rangle\langle n|$$
+  其中 $\rho_{mn} = \langle m| \hat{\rho} |n\rangle$
+
+**$\mathcal{L}$ 空间**
+- 态与力学量的表示
+  态用密度算符对应的右矢表示，力学量用对应的左矢表示
+  $$
+  \hat{\rho} \Rightarrow |\rho\rangle\rangle\qquad \hat{O} \Rightarrow \langle\langle O|
+  $$
+- 内积：用 $\mathrm{tr}$ 定义
+  $$(\langle\langle O|,|\rho\rangle\rangle) = \langle\langle O|\rho\rangle\rangle = \mathrm{tr}(\hat{O}\hat{\rho})$$
+
+
 
 <p align="right"><a href="#目录">返回目录</a></p>
 
@@ -268,6 +302,8 @@ $$
 ---
 
 ## 量子统计
+### 热平衡
+
 ### 统计力学的量子表述
 
 
@@ -275,6 +311,16 @@ $$
 <p align="right"><a href="#目录">返回目录</a></p>
 
 ### 线性响应理论
+
+
+
+
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
+### 开放系统
+
+
 
 
 
