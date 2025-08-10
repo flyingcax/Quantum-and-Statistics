@@ -2,4 +2,4 @@
 .history/
 
 # 忽略tex
-.tex
+*.tex
