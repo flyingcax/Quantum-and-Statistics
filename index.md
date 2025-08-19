@@ -334,23 +334,65 @@ $$
 ---
 
 ## 统计力学
+### 热力学
+- 广延量：将 $n$ 个相同的系统放在一起，会变为 $n$ 倍的量
+  强度量：不会变为 $n$ 倍的量
+- 热力学第零定律：​如果两个热力学系统都与第三个系统处于热平衡（即温度相等），则它们彼此也必定处于热平衡。
+- 热力学第一定律：
+  $$\mathrm{d}E = \mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q + \mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}W$$
+  即
+  $$k_B^{-1}\mathrm{d}S = \beta \mathrm{d}E +\xi \mathrm{d}X$$
+> **注：**  上式使用了以下等式
+> $$\begin{align*} &\beta = 1/k_BT \\ & \xi = -\beta f\\ &\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q = T\mathrm{d}S \\ &\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}W = f\mathrm{d}X\end{align*}$$
+> 其中， $X$ 是力学广延量， $f$ 是对应的作用量
+> 常见的 $X\sim\xi$ 对应关系见下表
+> | $X$ | $\xi$ |
+> | :-----:| :----: |
+> | $E$ | $\beta$ | 
+> | $V$ | $\beta p$ |
+> | $N$ | $-\beta \mu$ |
+
+
+
+<p align="right"><a href="#目录">返回目录</a></p>
+
 ### 系综理论
 **态与系综** 
 - 微观态：由所有粒子的坐标动量完全确定
   系统在态空间中的演化 $\Rightarrow $ 相空间 $(\bm{r}^N,\bm{p}^N)$ 的演化
 - 系综：一定条件下，同一系统所有微观态的集合
-- **等概率假设：** 能量 $E$ 与体积 $V$ 确定的孤立系统，在热力学平衡时，处于各种微观态的概率相同
 - 宏观态：由体系的能量来确定
   一个宏观态 $E_{\nu}$ 由很多个微观态简并而成
 
 **微正则系综**
-- 微观态数目 $\Omega(N,V,E) = $ 能量在 $E\sim E+\delta E$ 之间的微观态数目
+- 定义微观态数目 $\Omega(N,V,E) = $ 能量在 $E\sim E+\delta E$ 之间的微观态数目
   当能级 ${E}$ 连续时，可以定义态密度
   $$\bar{\Omega} = \frac{E\sim E+\mathrm{d} E \,\text{微观态数目}}{\mathrm{d} E}$$
+- **等概率假设：** 能量 $E$ 与体积 $V$ 确定的孤立系统，在热力学平衡时，处于各种微观态的概率相同
 
+**正则系综**
+- 考虑 system 与 bath 组成的孤立系统，当总能量固定为 $E$ ，假设 bath 非常大，则 system 处于态 $E_{\nu}(\ll E)$ 上的概率
+  $$P_{\nu} = Q^{-1} \exp(-\beta E_{\nu})$$
+  其中， $\beta = 1/k_B T$
+  配分函数 $Q= \sum_{\nu} \exp(-\beta E_{\nu})$
+- 若能级连续，则
+  $$
+  \begin{align*}
+    & P(E) = Q^{-1} e^{-\beta E}\,\bar{\Omega}(E) \\
+    & Q = \int e^{-\beta E}\,\bar{\Omega}(E)\,\mathrm{d}E
+  \end{align*}
+  $$
+- 平均能量：
+  $$\langle E \rangle = -\frac{\partial \ln Q}{\partial \beta}$$
+  平均能量涨落平方：
+  $$\langle (\delta E)^2 \rangle = -\frac{\partial \left\langle E\right\rangle}{\partial \beta} = \frac{\partial^2 \ln Q}{\partial \beta ^2}$$
 
-
-
+**广义系综**
+- 扩展一下 $\Omega$ 的定义
+  $\Omega(E，X) = $ 在 $E\sim E+\delta E$ 且 $X\sim X+\delta X$ 之间的微观态数目
+  对应的，态 $\{\nu\}\Leftrightarrow \{E = E_{\nu} \,, X = X_{\nu}\}$
+- 概率分布：
+  $$P_{\nu} = Q^{-1}\exp(-\beta E_{\nu}-\xi X_{\nu})$$
 
 
 
