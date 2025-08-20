@@ -342,15 +342,17 @@ $$
   $$\mathrm{d}E = \mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q + \mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}W$$
   即
   $$k_B^{-1}\mathrm{d}S = \beta \mathrm{d}E +\xi \mathrm{d}X$$
-> **注：**  上式使用了以下等式
+> **注：** 上式使用了以下等式
 > $$\begin{align*} &\beta = 1/k_BT \\ & \xi = -\beta f\\ &\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q = T\mathrm{d}S \\ &\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}W = f\mathrm{d}X\end{align*}$$
 > 其中， $X$ 是力学广延量， $f$ 是对应的作用量
 > 常见的 $X\sim\xi$ 对应关系见下表
-> | $X$ | $\xi$ |
-> | :-----:| :----: |
-> | $E$ | $\beta$ | 
-> | $V$ | $\beta p$ |
-> | $N$ | $-\beta \mu$ |
+>$$\begin{array}{c|c|c|c}  X&E&V&N\\  \hline  \xi & \beta & \beta p & -\beta\mu  \end{array}$$
+- 热力学第二定律：
+  $$\oint \frac{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q}{T}\leqslant 0$$
+  定义熵 $T\mathrm{d}S = (\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt} Q)_{\text{可逆}}$ ，则有熵增原理
+  $$\Delta S\geqslant 0$$
+> **注：** 微观熵的定义为：
+> $$S = k_B \ln \Omega$$
 
 
 
