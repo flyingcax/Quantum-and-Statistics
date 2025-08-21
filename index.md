@@ -447,6 +447,41 @@ $$
 - $[\hat{O}_1,\hat{O}_2] = \hat{O}_1\hat{O}_2 - \hat{O}_2\hat{O}_1$
 - $[\hat{O}_1\hat{O}_2,\hat{O}_3] = \hat{O}_1[\hat{O}_2,\hat{O}_3] + [\hat{O}_1,\hat{O}_3]\hat{O}_2$
 - $\{\hat{O}_1,\hat{O}_2\} = \hat{O}_1\hat{O}_2 + \hat{O}_2\hat{O}_1$
+
+### 数列
+**等差数列** 
+- 递推公式： $a_{n+1} = a_n +d$
+- 通项公式： $a_{n} = a_1 +(n-1)d$
+- 求和公式： 
+  $$S_n = \frac{1}{2}(a_1 + a_n)n$$
+
+**等比数列** 
+- 递推公式： $a_{n+1} = q\, a_n$
+- 通项公式： $a_{n} =q^{n-1} a_1$
+- 求和公式： 
+  $$S_n = \frac{a_1(1-q^n)}{1-q}$$
+
+**线性递推数列** 
+- 递推公式： $a_{n+1} =A a_n +B$
+  当 $A\neq 1$ 时，转化为等比数列： 
+  $a_{n+1}-\lambda = A(a_n-\lambda)$
+
+**二阶递推数列**
+- 递推公式： $a_{n+2} + Aa_{n+2} + Ba_n=0$
+  特征方程： $\lambda^2 +A\lambda+B=0$
+  其特征根记为 $\lambda_1$ 、 $\lambda_2$
+- 若 $\lambda_1=\lambda_2=\lambda$
+  $$a_n= (b_1+b_2n)\lambda^n$$
+  带入 $a_1$ 与 $ a_2 $ 即可解出系数 $b_1$ 与 $ b_2 $
+- 若 $\lambda_1\neq\lambda_2$
+  $$a_n= b_1\lambda_1^n+b_2\lambda_2^n$$
+  带入 $a_1$ 与 $ a_2 $ 即可解出系数 $b_1$ 与 $ b_2 $
+
+### 偏导
+- $$\left(\frac{\partial x}{\partial y} \right)_z=\left( \frac{\partial y}{\partial x}\right)_z^{-1}$$
+- 转圈圈公式：
+  $$\left(\frac{\partial x}{\partial y}\right)_z\left(\frac{\partial y}{\partial z}\right)_x\left(\frac{\partial z}{\partial x}\right)_y = -1$$
+
 ### 留数定理
 
 <p align="right"><a href="#目录">返回目录</a></p>
